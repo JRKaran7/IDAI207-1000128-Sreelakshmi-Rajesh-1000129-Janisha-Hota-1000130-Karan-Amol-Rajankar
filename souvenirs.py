@@ -38,7 +38,7 @@ for index, badge in enumerate(badges):
     if os.path.exists(image_path):
         img = Image.open(image_path)
         img = img.resize((120, 120))
-        col.image(img, caption=badge["name"], use_column_width=False)
+        col.image(img, caption=badge["name"], use_container_width=True)
     else:
         col.warning(f"Image not found: {image_path}")
 
