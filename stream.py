@@ -86,8 +86,15 @@ df['Similarity'] = (
     (1 - df['Cultural Match']) * 0.1  
 )
 
-# Get the most relevant package
-recommended_package = df.nsmallest(1, 'Similarity').to_dict(orient='records')[0]
+# Filter the dataset to only include results from the predicted state
+filtered_df = df[df['State'] == state_mapping[predicted_state_index]]
+
+# If there are no matching states, fall back to the full dataset
+if filtered_df.empty:
+    filtered_df = df
+
+# Get the best match within the predicted state
+recommended_package = filtered_df.nsmallest(1, 'Similarity').to_dict(orient='records')[0]
 
 # Decode categorical values
 recommended_package_decoded = {}
