@@ -104,7 +104,11 @@ for key, value in recommended_package.items():
     else:
         recommended_package_decoded[key] = value  
 
-recommended_package_decoded['State'] = state_mapping[predicted_state_index]
+if 'State' in recommended_package:
+    recommended_package_decoded['State'] = recommended_package['State']
+else:
+    recommended_package_decoded['State'] = state_mapping[predicted_state_index]
+
 
 # Display the recommendation
 st.subheader("🎉 Recommended Travel Package")
