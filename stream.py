@@ -104,11 +104,12 @@ for key, value in recommended_package.items():
     else:
         recommended_package_decoded[key] = value  
 
-if 'State' in recommended_package:
+if 'State' in recommended_package and isinstance(recommended_package['State'], (int, np.integer)):
+    recommended_package_decoded['State'] = state_mapping[recommended_package['State']]
+elif 'State' in recommended_package:
     recommended_package_decoded['State'] = recommended_package['State']
 else:
     recommended_package_decoded['State'] = state_mapping[predicted_state_index]
-
 
 # Display the recommendation
 st.subheader("🎉 Recommended Travel Package")
