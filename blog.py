@@ -40,7 +40,7 @@ if st.sidebar.button("Post"):
     if title and content:
         save_post(title, content)
         st.sidebar.success("Post added successfully!")
-        st.experimental_rerun()
+        st.rerun()
     else:
         st.sidebar.error("Title and Content are required!")
 
