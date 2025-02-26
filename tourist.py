@@ -23,7 +23,7 @@ st.markdown("""
         .state-title {
             font-size: 24px;
             font-weight: bold;
-            color: #007BFF;
+            color: #000000;
         }
         .guide-card {
             padding: 15px;
