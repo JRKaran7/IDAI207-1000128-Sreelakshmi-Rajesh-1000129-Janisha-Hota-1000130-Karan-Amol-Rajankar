@@ -13,8 +13,11 @@ if not os.path.exists(BLOG_FILE):
 
 # Load blog posts
 def load_posts():
-    with open(BLOG_FILE, "r") as f:
-        return json.load(f)
+    try:
+        with open(BLOG_FILE, "r") as f:
+            return json.load(f)
+    except json.JSONDecodeError:
+        return []
 
 # Save new blog post
 def save_post(title, content):
@@ -27,6 +30,15 @@ def save_post(title, content):
     posts.insert(0, new_post)  # Add new post at the top
     with open(BLOG_FILE, "w") as f:
         json.dump(posts, f, indent=4)
+
+# Delete a blog post
+def delete_post(index):
+    posts = load_posts()
+    if 0 <= index < len(posts):
+        del posts[index]
+        with open(BLOG_FILE, "w") as f:
+            json.dump(posts, f, indent=4)
+        st.rerun()
 
 # Streamlit UI
 st.set_page_config(page_title="📖 My Blog", layout="wide")
@@ -52,18 +64,27 @@ if search_query:
     posts = [post for post in posts if search_query.lower() in post["title"].lower()]
 
 # Display blog posts
-for post in posts:
-    st.markdown(f"## {post['title']}")
-    st.markdown(f"🗓️ *{post['date']}*")
-    st.markdown(post["content"])
-    st.markdown("---")
+if not posts:
+    st.info("No blog posts found.")
+
+for index, post in enumerate(posts):
+    with st.container():
+        st.markdown(f"## {post['title']}")
+        st.markdown(f"🗓️ *{post['date']}*")
+        st.markdown(post["content"])
+        
+        # Delete Button
+        if st.button("❌ Delete", key=f"del_{index}"):
+            delete_post(index)
+
+        st.markdown("---")
 
 # Custom CSS for styling
 st.markdown("""
     <style>
-        body { background-color: #f7f7f7; }
         .block-container { max-width: 750px; }
         h1 { color: #4CAF50; }
         h2 { color: #333; }
+        .stButton>button { background-color: #ff4d4d; color: white; border-radius: 5px; }
     </style>
     """, unsafe_allow_html=True)
