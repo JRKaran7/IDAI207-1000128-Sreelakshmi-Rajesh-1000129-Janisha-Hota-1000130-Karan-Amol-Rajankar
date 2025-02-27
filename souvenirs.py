@@ -5,7 +5,7 @@ import os
 
 # Function to get the highest score from scores table
 def get_high_score():
-    db_path = "Dataset and Database/scores.db"
+    db_path = "database/scores.db"
     if not os.path.exists(db_path):
         return 0  # Return 0 if database file doesn't exist
     try:
@@ -72,24 +72,19 @@ for index, badge in enumerate(badges):
     else:
         col.warning(f"Image not found: {image_path}")
 
-    # Purchase button (Centered) with messages
+    # Purchase button
     if badge["name"] not in st.session_state.purchased_badges:
-        with col:
-            st.markdown(
-                f"<div style='display: flex; justify-content: center;'>"
-                f"<button style='background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; font-size: 16px; cursor: pointer;'>{badge_price} pts</button>"
-                f"</div>",
-                unsafe_allow_html=True
-            )
-        if st.button(f"Buy ({badge_price} pts)", key=badge["name"]):
+        if col.button(f"Buy ({badge_price} pts)", key=badge["name"]):
             if st.session_state.points >= badge_price:
                 st.session_state.points -= badge_price
                 st.session_state.purchased_badges.add(badge["name"])
                 st.success(f"🎉 Congratulations! You have collected the {badge['name']} Badge! 🏅")
+
+                # Refresh progress bar
+                collected_badges = len(st.session_state.purchased_badges)
                 st.rerun()
             else:
-                st.error("❌ Oops! You don't have enough points to buy this badge.")
-
+                st.error("❌ Not enough points!")
 
 # Completion Message
 if collected_badges == total_badges:
