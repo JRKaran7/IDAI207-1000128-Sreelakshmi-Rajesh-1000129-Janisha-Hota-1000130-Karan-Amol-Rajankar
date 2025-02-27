@@ -5,7 +5,7 @@ import os
 
 # Function to get the highest score from scores table
 def get_high_score():
-    db_path = "database/scores.db"
+    db_path = "Dataset and Database/scores.db"
     if not os.path.exists(db_path):
         return 0  # Return 0 if database file doesn't exist
     try:
