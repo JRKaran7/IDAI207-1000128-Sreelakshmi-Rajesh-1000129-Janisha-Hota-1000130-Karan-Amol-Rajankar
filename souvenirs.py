@@ -19,13 +19,13 @@ def get_max_score(db_path, table_name, column_name):
         return 0
 
 # Fetch max scores from both databases
-trivia_max = get_scores("Dataset and Database/trivia_scores.db", "trivia", "score")
-game_max = get_high_score("Dataset and Database/scores.db", "game", "score")
+trivia_max = get_max_score("trivia_scores.db", "trivia", "score")
+game_max = get_max_score("scores.db", "game", "score")
 
 # Calculate initial points
 initial_points = trivia_max + game_max
 
-# Initialize session state for points
+# Initialize session state for points and badges
 if "points" not in st.session_state:
     st.session_state.points = initial_points  # Set points dynamically
 if "purchased_badges" not in st.session_state:
@@ -50,6 +50,15 @@ st.markdown("### Collect badges and spend your points!")
 # Display points
 st.subheader(f"💰 Points: {st.session_state.points}")
 
+# Display progress bar
+total_badges = len(badges)
+collected_badges = len(st.session_state.purchased_badges)
+progress = collected_badges / total_badges
+st.progress(progress)
+
+# Show badge collection progress
+st.markdown(f"**🏅 Badges Collected: {collected_badges}/{total_badges}**")
+
 # Layout for two badges per row
 col1, col2 = st.columns(2)
 
@@ -72,9 +81,13 @@ for index, badge in enumerate(badges):
                 st.session_state.points -= badge_price
                 st.session_state.purchased_badges.add(badge["name"])
                 st.success(f"✅ Purchased {badge['name']} Badge!")
+
+                # Refresh progress bar
+                collected_badges = len(st.session_state.purchased_badges)
+                st.experimental_rerun()
             else:
                 st.error("❌ Not enough points!")
 
 # Completion Message
-if len(st.session_state.purchased_badges) == len(badges):
-    st.success("🏆 Congratulations! You are The Seven Sister Champion!")
+if collected_badges == total_badges:
+    st.success("🏆 **You've collected all the badges! Your collection is complete!** 🎉")
