@@ -78,8 +78,8 @@ for index, badge in enumerate(badges):
             if st.session_state.points >= badge_price:
                 st.session_state.points -= badge_price
                 st.session_state.purchased_badges.add(badge["name"])
-                st.toast(f"🎉 Congratulations! You have collected the {badge['name']} Badge! 🏅")
-                time.sleep(2)  # Show message briefly before rerun
+                st.success(f"✅ Purchased {badge['name']} Badge!")
+
                 # Refresh progress bar
                 collected_badges = len(st.session_state.purchased_badges)
                 st.rerun()
