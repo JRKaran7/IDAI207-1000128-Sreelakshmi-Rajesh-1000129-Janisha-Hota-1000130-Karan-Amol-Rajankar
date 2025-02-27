@@ -96,6 +96,37 @@ if filtered_df.empty:
 # Get the best match within the predicted state
 recommended_package = filtered_df.nsmallest(1, 'Similarity').to_dict(orient='records')[0]
 
+# Decode categorical values
+recommended_package_decoded = {}
+for key, value in recommended_package.items():
+    if key in label_mappings and isinstance(value, (int, np.integer)):  
+        recommended_package_decoded[key] = label_mappings[key][value]  
+    else:
+        recommended_package_decoded[key] = value  
+
+if 'State' in recommended_package and isinstance(recommended_package['State'], (int, np.integer)):
+    recommended_package_decoded['State'] = state_mapping[recommended_package['State']]
+elif 'State' in recommended_package:
+    recommended_package_decoded['State'] = recommended_package['State']
+else:
+    recommended_package_decoded['State'] = state_mapping[predicted_state_index]
+
+# Display the recommendation
+st.subheader("🎉 Recommended Travel Package")
+st.markdown(f"""
+📍 **Destination:** `{recommended_package_decoded['State']}`  
+💰 **Budget:** ₹ `{recommended_package_decoded['Budget (INR)']}`  
+⏳ **Best Season:** `{recommended_package_decoded['Season']}`  
+🎭 **Cultural Highlights:** `{recommended_package_decoded['Cultural Highlights']}`  
+🍽 **Food Cost per day:** ₹ `{recommended_package_decoded['Food Cost (INR)']}`  
+🏨 **Hotel Cost per night:** ₹ `{recommended_package_decoded['Hotel Cost (INR)']}`  
+⭐ **Average Review Rating:** `{recommended_package_decoded['Reviews']} / 5.0`
+""")
+
+# Display the dataset for reference
+st.subheader("📊 Travel Package Data")
+st.dataframe(df[['State', 'Budget (INR)', 'Season', 'Cultural Highlights', 'Food Cost (INR)', 'Hotel Cost (INR)', 'Reviews']].head(10))
+
 # Store progress in Streamlit session state
 if "progress" not in st.session_state:
     st.session_state.progress = {
@@ -129,4 +160,3 @@ progress_percentage = (completed_steps / total_steps) * 100
 # Show progress bar
 st.progress(progress_percentage / 100)
 st.write(f"**Your progress: {progress_percentage:.2f}% completed!**")
-
