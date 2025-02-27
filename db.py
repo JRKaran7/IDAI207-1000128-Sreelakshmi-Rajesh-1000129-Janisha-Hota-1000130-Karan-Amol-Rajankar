@@ -1,7 +1,7 @@
 import sqlite3
 
 # Connect to SQLite database
-conn = sqlite3.connect("travel_progress.db")
+conn = sqlite3.connect("Dataset and Database/travel_progress.db")
 cursor = conn.cursor()
 
 # Create a table for tracking progress if it doesn’t exist
