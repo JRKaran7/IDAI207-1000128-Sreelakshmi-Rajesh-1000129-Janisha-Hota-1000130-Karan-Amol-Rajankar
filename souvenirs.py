@@ -20,7 +20,8 @@ def get_high_score():
         return 0
 
 # Fetch max score from scores.db
-initial_points = get_high_score()
+max_score = get_high_score()
+initial_points = 100 + (max_score // 100) * 100  # Base 100 + 100 per 100 score points
 
 # Initialize session state for points and badges
 if "points" not in st.session_state:
