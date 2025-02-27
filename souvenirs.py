@@ -72,11 +72,11 @@ for index, badge in enumerate(badges):
     else:
         col.warning(f"Image not found: {image_path}")
 
-    # Purchase button
+    # Purchase button (Centered)
     if badge["name"] not in st.session_state.purchased_badges:
         col.markdown(
             f"<div style='display: flex; justify-content: center;'>"
-            f"<button onclick='window.location.reload();' style='background-color: #4CAF50; color: white; border: none; padding: 8px 16px; text-align: center; font-size: 16px; cursor: pointer;'>{badge_price} pts</button>"
+            f"<button style='background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; font-size: 16px; cursor: pointer;'>{badge_price} pts</button>"
             f"</div>",
             unsafe_allow_html=True
         )
@@ -85,9 +85,6 @@ for index, badge in enumerate(badges):
                 st.session_state.points -= badge_price
                 st.session_state.purchased_badges.add(badge["name"])
                 st.success(f"✅ Purchased {badge['name']} Badge!")
-
-                # Refresh progress bar
-                collected_badges = len(st.session_state.purchased_badges)
                 st.rerun()
             else:
                 st.error("❌ Not enough points!")
