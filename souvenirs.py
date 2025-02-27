@@ -34,7 +34,7 @@ for index, badge in enumerate(badges):
     col = col1 if index % 2 == 0 else col2  # Alternate between columns
 
     # Load image
-    image_path = badge["image"]
+    image_path = f"Badges/{badge["image"]}"
     if os.path.exists(image_path):
         img = Image.open(image_path)
         img = img.resize((120, 120))
