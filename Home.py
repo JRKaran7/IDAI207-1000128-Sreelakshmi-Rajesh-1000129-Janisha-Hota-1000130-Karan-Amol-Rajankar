@@ -8,7 +8,7 @@ def main():
     logo_path = "Dataset and Database/logo.png"  # Change this to your actual logo file path
     try:
         logo = Image.open(logo_path)
-        st.sidebar.image(logo, caption="Travel Advisor", use_column_width=True)
+        st.sidebar.image(logo, caption="Travel Advisor", use_container_width=True)
     except:
         st.sidebar.write("No logo found. Add 'logo.png' in the folder.")
 
@@ -16,7 +16,7 @@ def main():
     image_path = "Dataset and Database/Dashboard.pdf"  # Change this to your actual image path
     try:
         dashboard_image = Image.open(image_path)
-        st.image(dashboard_image, caption="Dashboard Overview", use_column_width=True)
+        st.image(dashboard_image, caption="Dashboard Overview", use_container_width=True)
     except:
         st.write("⚠️ Dashboard image not found. Please upload 'dashboard_image.png'.")
 
