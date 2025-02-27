@@ -74,6 +74,12 @@ for index, badge in enumerate(badges):
 
     # Purchase button
     if badge["name"] not in st.session_state.purchased_badges:
+        col.markdown(
+            f"<div style='display: flex; justify-content: center;'>"
+            f"<button onclick='window.location.reload();' style='background-color: #4CAF50; color: white; border: none; padding: 8px 16px; text-align: center; font-size: 16px; cursor: pointer;'>{badge_price} pts</button>"
+            f"</div>",
+            unsafe_allow_html=True
+        )
         if col.button(f"Buy ({badge_price} pts)", key=badge["name"]):
             if st.session_state.points >= badge_price:
                 st.session_state.points -= badge_price
