@@ -10,7 +10,6 @@ scaler = joblib.load("Models/scaler.pkl")
 
 # Load dataset
 df = pd.read_csv("Dataset and Database/Seven_Sisters_Travel_Packages_Cleaned_Encoded.csv")
-dataset = pd.read_csv("Dataset and Database/Seven_Sisters_Travel_Packages_Updated.csv")
 
 # Define state mapping
 state_mapping = ['Arunachal Pradesh', 'Assam', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Tripura']
@@ -130,7 +129,7 @@ st.markdown(f"""
 
 # Display the dataset for reference
 st.subheader("📊 Travel Package Data")
-st.dataframe(dataset[['State', 'Budget (INR)', 'Season', 'Cultural Highlights', 'Food Cost (INR)', 'Hotel Cost (INR)', 'Reviews']].iloc[1:6])
+st.dataframe(df[['State', 'Budget (INR)', 'Season', 'Cultural Highlights', 'Food Cost (INR)', 'Hotel Cost (INR)', 'Reviews']].tail(5))
 
 # Store progress in Streamlit session state
 if "progress" not in st.session_state:
