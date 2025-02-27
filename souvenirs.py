@@ -72,22 +72,24 @@ for index, badge in enumerate(badges):
     else:
         col.warning(f"Image not found: {image_path}")
 
-    # Purchase button (Centered)
+    # Purchase button (Centered) with messages
     if badge["name"] not in st.session_state.purchased_badges:
-        col.markdown(
-            f"<div style='display: flex; justify-content: center;'>"
-            f"<button style='background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; font-size: 16px; cursor: pointer;'>{badge_price} pts</button>"
-            f"</div>",
-            unsafe_allow_html=True
-        )
-        if col.button(f"Buy ({badge_price} pts)", key=badge["name"]):
+        with col:
+            st.markdown(
+                f"<div style='display: flex; justify-content: center;'>"
+                f"<button style='background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; font-size: 16px; cursor: pointer;'>{badge_price} pts</button>"
+                f"</div>",
+                unsafe_allow_html=True
+            )
+        if st.button(f"Buy ({badge_price} pts)", key=badge["name"]):
             if st.session_state.points >= badge_price:
                 st.session_state.points -= badge_price
                 st.session_state.purchased_badges.add(badge["name"])
-                st.success(f"✅ Purchased {badge['name']} Badge!")
+                st.success(f"🎉 Congratulations! You have collected the {badge['name']} Badge! 🏅")
                 st.rerun()
             else:
-                st.error("❌ Not enough points!")
+                st.error("❌ Oops! You don't have enough points to buy this badge.")
+
 
 # Completion Message
 if collected_badges == total_badges:
