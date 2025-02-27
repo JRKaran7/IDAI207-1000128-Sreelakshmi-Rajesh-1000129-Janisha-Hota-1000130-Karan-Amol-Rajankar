@@ -1,10 +1,33 @@
 import streamlit as st
+import sqlite3
 from PIL import Image
 import os
 
+# Function to fetch max score from a database
+def get_max_score(db_path, table_name, column_name):
+    if not os.path.exists(db_path):
+        return 0  # Return 0 if the database file doesn't exist
+    try:
+        conn = sqlite3.connect(db_path)
+        cursor = conn.cursor()
+        cursor.execute(f"SELECT MAX({column_name}) FROM {table_name}")
+        max_score = cursor.fetchone()[0] or 0  # Default to 0 if no value is found
+        conn.close()
+        return max_score
+    except Exception as e:
+        st.error(f"Error accessing {db_path}: {e}")
+        return 0
+
+# Fetch max scores from both databases
+trivia_max = get_scores("Dataset and Database/trivia_scores.db", "trivia", "score")
+game_max = get_high_score("Dataset and Database/scores.db", "game", "score")
+
+# Calculate initial points
+initial_points = trivia_max + game_max
+
 # Initialize session state for points
 if "points" not in st.session_state:
-    st.session_state.points = 5000  # Starting points
+    st.session_state.points = initial_points  # Set points dynamically
 if "purchased_badges" not in st.session_state:
     st.session_state.purchased_badges = set()
 
@@ -34,7 +57,7 @@ for index, badge in enumerate(badges):
     col = col1 if index % 2 == 0 else col2  # Alternate between columns
 
     # Load image
-    image_path = f"Badges/{badge["image"]}"
+    image_path = f"Badges/{badge['image']}"
     if os.path.exists(image_path):
         img = Image.open(image_path)
         img = img.resize((120, 120))
