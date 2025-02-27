@@ -5,11 +5,11 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 
 # Load trained model and scaler
-model = joblib.load("best_travel_recommender.pkl")
-scaler = joblib.load("scaler.pkl")
+model = joblib.load("Models/best_travel_recommender.pkl")
+scaler = joblib.load("Models/scaler.pkl")
 
 # Load dataset
-df = pd.read_csv("Seven_Sisters_Travel_Packages_Cleaned_Encoded.csv")
+df = pd.read_csv("Dataset and Database/Seven_Sisters_Travel_Packages_Cleaned_Encoded.csv")
 
 # Define state mapping
 state_mapping = ['Arunachal Pradesh', 'Assam', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Tripura']
