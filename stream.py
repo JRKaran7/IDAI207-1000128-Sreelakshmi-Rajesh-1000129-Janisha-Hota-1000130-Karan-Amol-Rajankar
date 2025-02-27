@@ -129,7 +129,7 @@ st.markdown(f"""
 
 # Display the dataset for reference
 st.subheader("📊 Travel Package Data")
-st.dataframe(df[['State', 'Budget (INR)', 'Season', 'Cultural Highlights', 'Food Cost (INR)', 'Hotel Cost (INR)', 'Reviews']].tail(5))
+st.dataframe(df[['State', 'Budget (INR)', 'Season', 'Cultural Highlights', 'Food Cost (INR)', 'Hotel Cost (INR)', 'Reviews']].iloc[5:10])
 
 # Store progress in Streamlit session state
 if "progress" not in st.session_state:
