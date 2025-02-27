@@ -19,7 +19,7 @@ def get_max_score(db_path, table_name, column_name):
         return 0
 
 # Fetch max score only from scores.db
-game_max = get_high_score("Dataset and Database/scores.db", "game", "score")
+game_max = get_max_score("Dataset and Database/scores.db", "game", "score")
 
 # Set initial points
 initial_points = game_max
