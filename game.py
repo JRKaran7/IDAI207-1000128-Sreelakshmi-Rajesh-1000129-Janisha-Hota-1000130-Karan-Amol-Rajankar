@@ -92,9 +92,6 @@ while st.session_state.game_running:
     score_col.subheader(f"Score: {st.session_state.score}")
     max_score_col.subheader(f"Max Score: {st.session_state.max_score}")
 
-    # Streamlit Frame Rate Control
-    cv2.waitKey(50)  # Simulates game frame refresh rate
-
 # Save Score Before Exiting
 save_score(st.session_state.score)
 cap.release()
