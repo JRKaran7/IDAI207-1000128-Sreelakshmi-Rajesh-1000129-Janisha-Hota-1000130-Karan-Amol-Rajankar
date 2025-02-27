@@ -13,7 +13,7 @@ def main():
         st.sidebar.write("No logo found. Add 'logo.png' in the folder.")
 
     # Load Dashboard Image
-    image_path = "Dataset and Database/dashboard.png"  # Change this to your actual image path
+    image_path = "Dataset and Database/Dashboard.pdf"  # Change this to your actual image path
     try:
         dashboard_image = Image.open(image_path)
         st.image(dashboard_image, caption="Dashboard Overview", use_column_width=True)
