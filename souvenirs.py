@@ -18,12 +18,11 @@ def get_max_score(db_path, table_name, column_name):
         st.error(f"Error accessing {db_path}: {e}")
         return 0
 
-# Fetch max scores from both databases
-trivia_max = get_max_score("trivia_scores.db", "trivia", "score")
-game_max = get_max_score("scores.db", "game", "score")
+# Fetch max score only from scores.db
+game_max = get_high_score("Dataset and Database/scores.db", "game", "score")
 
-# Calculate initial points
-initial_points = trivia_max + game_max
+# Set initial points
+initial_points = game_max
 
 # Initialize session state for points and badges
 if "points" not in st.session_state:
