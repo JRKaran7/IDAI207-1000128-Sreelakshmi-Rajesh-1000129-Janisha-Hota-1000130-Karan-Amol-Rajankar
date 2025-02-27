@@ -4,7 +4,7 @@ import os
 from datetime import datetime
 
 # File to store blog data
-BLOG_FILE = "blog_data.json"
+BLOG_FILE = "Dataset and Database/blog_data.json"
 
 # Ensure the JSON file exists
 if not os.path.exists(BLOG_FILE):
