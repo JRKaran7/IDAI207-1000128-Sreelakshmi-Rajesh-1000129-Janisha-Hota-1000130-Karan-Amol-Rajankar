@@ -1,6 +1,9 @@
+opencv-python-headless
 streamlit
 pillow
 pandas
 numpy
 scikit-learn==1.3.2
 joblib
+mediapipe
+datetime
