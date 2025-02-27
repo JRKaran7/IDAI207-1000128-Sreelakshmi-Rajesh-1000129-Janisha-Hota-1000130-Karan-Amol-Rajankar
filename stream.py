@@ -99,10 +99,10 @@ recommended_package = filtered_df.nsmallest(1, 'Similarity').to_dict(orient='rec
 # Decode categorical values
 recommended_package_decoded = {}
 for key, value in recommended_package.items():
-    if key in label_mappings and isinstance(value, (int, np.integer)):  
-        recommended_package_decoded[key] = label_mappings[key][value]  
-    else:
-        recommended_package_decoded[key] = value  
+    if key in label_mappings and isinstance(value, (int, np.integer)):          
+        recommended_package_decoded[key] = label_mappings[key][value]      
+    else:         
+        recommended_package_decoded[key] = value
 
 if 'State' in recommended_package and isinstance(recommended_package['State'], (int, np.integer)):
     recommended_package_decoded['State'] = state_mapping[recommended_package['State']]
@@ -110,6 +110,10 @@ elif 'State' in recommended_package:
     recommended_package_decoded['State'] = recommended_package['State']
 else:
     recommended_package_decoded['State'] = state_mapping[predicted_state_index]
+
+# Ensure 'Hotel Cost (INR)' is formatted correctly
+if 'Hotel Cost (INR)' in recommended_package:
+    recommended_package_decoded['Hotel Cost (INR)'] = int(recommended_package['Hotel Cost (INR)'])
 
 # Display the recommendation
 st.subheader("🎉 Recommended Travel Package")
