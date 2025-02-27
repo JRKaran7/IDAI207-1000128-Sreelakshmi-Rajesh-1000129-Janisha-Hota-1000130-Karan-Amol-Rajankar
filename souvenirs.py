@@ -3,14 +3,15 @@ import sqlite3
 from PIL import Image
 import os
 
-# Function to fetch max score from a database
-def get_max_score(db_path, table_name, column_name):
+# Function to get the highest score from scores table
+def get_high_score():
+    db_path = "Dataset and Database/scores.db"
     if not os.path.exists(db_path):
-        return 0  # Return 0 if the database file doesn't exist
+        return 0  # Return 0 if database file doesn't exist
     try:
         conn = sqlite3.connect(db_path)
         cursor = conn.cursor()
-        cursor.execute(f"SELECT MAX({column_name}) FROM {table_name}")
+        cursor.execute("SELECT MAX(points) FROM scores")
         max_score = cursor.fetchone()[0] or 0  # Default to 0 if no value is found
         conn.close()
         return max_score
@@ -18,11 +19,8 @@ def get_max_score(db_path, table_name, column_name):
         st.error(f"Error accessing {db_path}: {e}")
         return 0
 
-# Fetch max score only from scores.db
-game_max = get_max_score("Dataset and Database/scores.db", "game", "score")
-
-# Set initial points
-initial_points = game_max
+# Fetch max score from scores.db
+initial_points = get_high_score()
 
 # Initialize session state for points and badges
 if "points" not in st.session_state:
@@ -41,7 +39,7 @@ badges = [
     {"name": "Mizoram", "image": "Mizoram Badge.png"},
 ]
 
-badge_price = 2000  # Cost per badge
+badge_price = 100  # Cost per badge
 
 st.title("🎖️ Souvenir Shop")
 st.markdown("### Collect badges and spend your points!")
