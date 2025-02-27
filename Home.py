@@ -1,46 +1,43 @@
 import streamlit as st
+from PIL import Image
 
-# Set page title and icon
-st.set_page_config(page_title="Travel Advisor", page_icon="🌍", layout="wide")
+def main():
+    st.set_page_config(page_title="Travel Advisor Dashboard", layout="wide")
+    
+    # Load Dashboard Image
+    image_path = "dashboard_image.png"  # Change this to your actual image path
+    dashboard_image = Image.open(image_path)
+    st.image(dashboard_image, caption="Dashboard Overview", use_column_width=True)
+    
+    st.title("🌍 Travel Advisor Dashboard")
+    st.write("Welcome to the ultimate travel companion! Choose an option below to explore features.")
+    
+    # Navigation Buttons
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        if st.button("Tourist Info 🏕️"):
+            st.switch_page("tourist.py")
+        if st.button("Souvenirs 🎁"):
+            st.switch_page("souvenirs.py")
+        if st.button("Chatbot 🤖"):
+            st.switch_page("chatbot.py")
+    
+    with col2:
+        if st.button("Travel Itinerary 📅"):
+            st.switch_page("travel_itenary.py")
+        if st.button("Group Planning 👥"):
+            st.switch_page("group_planning.py")
+        if st.button("Trivia Quiz ❓"):
+            st.switch_page("trivia.py")
+    
+    with col3:
+        if st.button("Weather 🌤️"):
+            st.switch_page("weather.py")
+        if st.button("News 📰"):
+            st.switch_page("news.py")
+        if st.button("Blog ✍️"):
+            st.switch_page("blog.py")
 
-# Header
-st.title("🌍 Welcome to Your Travel Advisor")
-st.subheader("Plan your perfect trip with ease and fun!")
-
-# Description
-st.write("""
-Explore personalized recommendations, check the weather, get guided itineraries, chat with our AI bot, play travel trivia, and even shop for souvenirs!
-Select a section below to begin your adventure.
-""")
-
-# Create buttons/links to each module
-col1, col2, col3 = st.columns(3)
-
-with col1:
-    if st.button("📅 Travel Itinerary"):
-        st.switch_page("travel_itenary.py")  # Link to travel itinerary page
-
-    if st.button("🤖 Chat with TravelBot"):
-        st.switch_page("chatbot.py")  # Link to chatbot page
-
-    if st.button("🏅 Travel Trivia"):
-        st.switch_page("trivia.py")  # Link to trivia page
-
-with col2:
-    if st.button("☀️ Check Weather"):
-        st.switch_page("weather.py")  # Link to weather page
-
-    if st.button("🗺️ Tourist Guide"):
-        st.switch_page("tourist_guide.py")  # Link to tourist guide page
-
-    if st.button("🎁 Souvenirs"):
-        st.switch_page("souvenirs.py")  # Link to souvenirs page
-
-with col3:
-    if st.button("🌟 Recommendations"):
-        st.switch_page("recommendations.py")  # Link to recommendations page
-
-# Optional Footer
-st.markdown("---")
-st.write("🚀 Developed with ❤️ for travel enthusiasts")
-
+if __name__ == "__main__":
+    main()
