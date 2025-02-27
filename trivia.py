@@ -15,14 +15,14 @@ def initialize_db():
     conn.close()
 
 def add_score(player_name, score):
-    conn = sqlite3.connect("trivia_scores.db")
+    conn = sqlite3.connect("Dataset and Database/trivia_scores.db")
     cursor = conn.cursor()
     cursor.execute("INSERT INTO scores (player_name, score) VALUES (?, ?)", (player_name, score))
     conn.commit()
     conn.close()
 
 def get_scores():
-    conn = sqlite3.connect("trivia_scores.db")
+    conn = sqlite3.connect("Dataset and Database/trivia_scores.db")
     cursor = conn.cursor()
     cursor.execute("SELECT player_name, score FROM scores ORDER BY score DESC LIMIT 10")
     scores = cursor.fetchall()
@@ -44,7 +44,7 @@ def filter_questions_by_category(questions, category):
 st.title("Seven Sisters Trivia Challenge")
 
 # Load data
-FILE_PATH = "trivia.csv"  # Update with actual path
+FILE_PATH = "Dataset and Database/trivia.csv"  # Update with actual path
 questions = load_questions(FILE_PATH)
 
 # Player Name Input
