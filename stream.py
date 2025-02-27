@@ -127,16 +127,51 @@ st.markdown(f"""
 st.subheader("📊 Travel Package Data")
 st.dataframe(df[['State', 'Budget (INR)', 'Season', 'Cultural Highlights', 'Food Cost (INR)', 'Hotel Cost (INR)', 'Reviews']].head(10))
 
-
-# Connect to the database
-conn = sqlite3.connect("Dataset and Database/travel_progress.db")
+# --- Save the recommended package to SQLite ---
+conn = sqlite3.connect("travel_progress.db")
 cursor = conn.cursor()
+
+# Create table if it doesn't exist
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS travel_progress (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        state TEXT,
+        budget INTEGER,
+        best_season TEXT,
+        cultural_highlight TEXT,
+        food_cost INTEGER,
+        hotel_cost INTEGER,
+        review_rating REAL,
+        flights_booked INTEGER DEFAULT 0,
+        hotel_booked INTEGER DEFAULT 0,
+        activities_planned INTEGER DEFAULT 0,
+        packing_done INTEGER DEFAULT 0,
+        trip_completed INTEGER DEFAULT 0
+    )
+''')
+
+# Insert new recommended package
+cursor.execute('''
+    INSERT INTO travel_progress (state, budget, best_season, cultural_highlight, food_cost, hotel_cost, review_rating)
+    VALUES (?, ?, ?, ?, ?, ?, ?)
+''', (
+    recommended_package_decoded['State'],
+    recommended_package_decoded['Budget (INR)'],
+    recommended_package_decoded['Season'],
+    recommended_package_decoded['Cultural Highlights'],
+    recommended_package_decoded['Food Cost (INR)'],
+    recommended_package_decoded['Hotel Cost (INR)'],
+    recommended_package_decoded['Reviews']
+))
+
+conn.commit()
+
+# --- Travel Progress Tracking ---
+st.subheader("📊 Your Travel Planning Progress")
 
 # Fetch the latest recommended package
 cursor.execute("SELECT * FROM travel_progress ORDER BY id DESC LIMIT 1")
 latest_package = cursor.fetchone()
-
-st.subheader("📊 Your Travel Planning Progress")
 
 if latest_package:
     st.write(f"📍 **Destination:** {latest_package[1]}")
@@ -178,10 +213,8 @@ if latest_package:
     # Show progress bar
     st.progress(progress / 100)
     st.write(f"**Your progress: {progress:.2f}% completed!**")
-    
+
 else:
     st.warning("No travel package found. Please get a recommendation first.")
 
-# Close database connection
 conn.close()
-
