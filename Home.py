@@ -4,11 +4,22 @@ from PIL import Image
 def main():
     st.set_page_config(page_title="Travel Advisor Dashboard", layout="wide")
     
+    # Load Logo (Optional)
+    logo_path = "Dataset and Database/logo.png"  # Change this to your actual logo file path
+    try:
+        logo = Image.open(logo_path)
+        st.sidebar.image(logo, caption="Travel Advisor", use_column_width=True)
+    except:
+        st.sidebar.write("No logo found. Add 'logo.png' in the folder.")
+
     # Load Dashboard Image
-    image_path = "dashboard_image.png"  # Change this to your actual image path
-    dashboard_image = Image.open(image_path)
-    st.image(dashboard_image, caption="Dashboard Overview", use_column_width=True)
-    
+    image_path = "Dataset and Database/dashboard.png"  # Change this to your actual image path
+    try:
+        dashboard_image = Image.open(image_path)
+        st.image(dashboard_image, caption="Dashboard Overview", use_column_width=True)
+    except:
+        st.write("⚠️ Dashboard image not found. Please upload 'dashboard_image.png'.")
+
     st.title("🌍 Travel Advisor Dashboard")
     st.write("Welcome to the ultimate travel companion! Choose an option below to explore features.")
     
