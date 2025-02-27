@@ -128,7 +128,7 @@ st.subheader("📊 Travel Package Data")
 st.dataframe(df[['State', 'Budget (INR)', 'Season', 'Cultural Highlights', 'Food Cost (INR)', 'Hotel Cost (INR)', 'Reviews']].head(10))
 
 # --- Save the recommended package to SQLite ---
-conn = sqlite3.connect("travel_progress.db")
+conn = sqlite3.connect("Dataset and Database/travel_progress.db")
 cursor = conn.cursor()
 
 # Create table if it doesn't exist
