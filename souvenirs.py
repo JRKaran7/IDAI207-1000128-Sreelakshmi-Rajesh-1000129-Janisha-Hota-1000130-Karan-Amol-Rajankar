@@ -84,7 +84,7 @@ for index, badge in enumerate(badges):
 
                 # Refresh progress bar
                 collected_badges = len(st.session_state.purchased_badges)
-                st.experimental_rerun()
+                st.rerun()
             else:
                 st.error("❌ Not enough points!")
 
