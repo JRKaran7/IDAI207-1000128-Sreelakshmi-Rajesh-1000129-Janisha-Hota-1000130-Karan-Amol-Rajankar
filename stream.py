@@ -126,3 +126,62 @@ st.markdown(f"""
 # Display the dataset for reference
 st.subheader("📊 Travel Package Data")
 st.dataframe(df[['State', 'Budget (INR)', 'Season', 'Cultural Highlights', 'Food Cost (INR)', 'Hotel Cost (INR)', 'Reviews']].head(10))
+
+
+# Connect to the database
+conn = sqlite3.connect("Dataset and Database/travel_progress.db")
+cursor = conn.cursor()
+
+# Fetch the latest recommended package
+cursor.execute("SELECT * FROM travel_progress ORDER BY id DESC LIMIT 1")
+latest_package = cursor.fetchone()
+
+st.subheader("📊 Your Travel Planning Progress")
+
+if latest_package:
+    st.write(f"📍 **Destination:** {latest_package[1]}")
+    st.write(f"💰 **Budget:** ₹{latest_package[2]}")
+    st.write(f"⏳ **Best Season:** {latest_package[3]}")
+    st.write(f"🎭 **Cultural Highlights:** {latest_package[4]}")
+    st.write(f"🍽 **Food Cost per day:** ₹{latest_package[5]}")
+    st.write(f"🏨 **Hotel Cost per night:** ₹{latest_package[6]}")
+    st.write(f"⭐ **Average Review Rating:** {latest_package[7]} / 5.0")
+
+    # Track progress
+    flights = st.checkbox("✈️ Flights Booked", value=bool(latest_package[8]))
+    hotel = st.checkbox("🏨 Hotel Booked", value=bool(latest_package[9]))
+    activities = st.checkbox("🎟 Activities Planned", value=bool(latest_package[10]))
+    packing = st.checkbox("🎒 Packing Done", value=bool(latest_package[11]))
+    trip_done = st.checkbox("✅ Trip Completed", value=bool(latest_package[12]))
+
+    # Function to update progress
+    def update_progress(column, value):
+        cursor.execute(f"UPDATE travel_progress SET {column} = ? WHERE id = ?", (value, latest_package[0]))
+        conn.commit()
+
+    if flights:
+        update_progress("flights_booked", 1)
+    if hotel:
+        update_progress("hotel_booked", 1)
+    if activities:
+        update_progress("activities_planned", 1)
+    if packing:
+        update_progress("packing_done", 1)
+    if trip_done:
+        update_progress("trip_completed", 1)
+
+    # Calculate progress
+    completed_steps = sum([flights, hotel, activities, packing, trip_done])
+    total_steps = 5
+    progress = (completed_steps / total_steps) * 100
+
+    # Show progress bar
+    st.progress(progress / 100)
+    st.write(f"**Your progress: {progress:.2f}% completed!**")
+    
+else:
+    st.warning("No travel package found. Please get a recommendation first.")
+
+# Close database connection
+conn.close()
+
