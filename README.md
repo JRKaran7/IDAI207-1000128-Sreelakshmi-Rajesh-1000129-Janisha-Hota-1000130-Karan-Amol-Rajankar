@@ -24,6 +24,7 @@ To bridge this gap, this project aims to create a dedicated travel advisory app 
 •	Offer budget-friendly itinerary planning based on user preferences.
 
 ## Features
+
 - **Travel Itinerary:** Create and customize travel itineraries based on user preferences.
 - **Chatbot:** Receive AI-powered travel recommendations and answers to common travel questions.
 - **Trivia:** Engage with fun quizzes that test your knowledge of NorthEast India.
@@ -35,106 +36,42 @@ To bridge this gap, this project aims to create a dedicated travel advisory app 
 - **Game:** Enjoy interactive travel games to make planning fun.
 
 ## Technologies Used
-- **Programming Language:** Python
-- **Framework:** Streamlit
-- **Libraries:** 
-  - OpenCV (for image and video processing in game features)
-  - NumPy (for numerical operations)
-  - SQLite3 (for database operations)
-- **APIs:** Gemini API (for AI chatbot integration)
-- **Other:** Custom CSS for theming and styling
 
-## Installation Instructions
-Follow these steps to set up and run the project locally:
+1. Python
+2. Streamlit
+3. SQLite
+4. Pandas
+5. NumPy
+6. Scikit-learn
+7. Pygame
+8. OpenCV (CV2)
+9. Datetime
+10.requests
+11.PIL (Pillow)
+12. HTML
+13. CSS
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/yourusername/eastern-trails.git
-   cd eastern-trails
-Create a Virtual Environment:
+**Usage Instructions**
 
-bash
-Copy
-Edit
-python -m venv venv
-Activate the virtual environment:
+Upon launching the app, the home page will display a header with the Eastern Trails logo and title. A subtitle briefly explains the purpose of the app. The main section displays feature cards (such as Travel Itinerary, Chatbot, Trivia, etc.) arranged in a grid. Click any card to navigate to that feature's dedicated page. Each feature page provides detailed information and interactive tools for planning your trip. Enjoy exploring travel options and planning your adventure through NorthEast India!
 
-On macOS/Linux:
-bash
-Copy
-Edit
-source venv/bin/activate
-On Windows:
-bash
-Copy
-Edit
-venv\Scripts\activate
-Install Dependencies:
+**Contribution Guidelines**
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Ensure Folder Structure: Your project folder should look like this:
+1. Contributions are welcome! To contribute:
+2. Fork the Repository.
+3. Create a New Branch for your feature or bug fix
+4. git checkout -b feature/your-feature-name
+5. Commit Your Changes with clear and descriptive commit messages.
+6. Push Your Branch to your fork
+7. Open a Pull Request on GitHub describing your changes.
+8. Please follow the existing code style and structure.
 
-pgsql
-Copy
-Edit
-eastern-trails/
-├── Home.py
-├── pages/
-│   ├── travel_itinerary.py
-│   ├── chatbot.py
-│   ├── trivia.py
-│   ├── weather.py
-│   ├── tourist.py
-│   ├── souvenirs.py
-│   ├── group_planning.py
-│   ├── blog.py
-│   └── game.py
-├── Dataset and Database/
-│   ├── eastern_trails_logo.png
-│   └── scores.db
-├── database.py
-├── requirements.txt
-└── README.md
-Run the Application:
+**Acknowledgments**
 
-bash
-Copy
-Edit
-streamlit run Home.py
-Usage Instructions
-Upon launching the app, the home page will display a header with the Eastern Trails logo and title.
-A subtitle briefly explains the purpose of the app.
-The main section displays feature cards (such as Travel Itinerary, Chatbot, Trivia, etc.) arranged in a grid. Click any card to navigate to that feature's dedicated page.
-Each feature page provides detailed information and interactive tools for planning your trip.
-Enjoy exploring travel options and planning your adventure through NorthEast India!
-Contribution Guidelines
-Contributions are welcome! To contribute:
-
-Fork the repository.
-Create a new branch for your feature or bug fix:
-bash
-Copy
-Edit
-git checkout -b feature/your-feature-name
-Commit your changes with clear and descriptive commit messages.
-Push your branch to your fork:
-bash
-Copy
-Edit
-git push origin feature/your-feature-name
-Open a Pull Request on GitHub describing your changes.
-Please follow the existing code style and structure.
-Acknowledgments
 Streamlit: For providing an easy-to-use framework for building interactive web applications.
 OpenCV & NumPy: For their powerful image processing and numerical computation capabilities.
-Gemini API: For offering an affordable alternative to OpenAI's API for chatbot functionality.
+Gemini API: For offering an affordable alternative to OpenAI’s API for chatbot functionality.
 Community and Documentation: Thanks to the open-source community for tutorials, forums, and resources that helped shape this project.
-Screenshots / Demos
-Home Page
 
-Feature Page Example (Travel Itinerary)
+**Screenshots / Demos**
 
-Note: Replace the image paths above with the actual URLs or paths to your screenshots.
