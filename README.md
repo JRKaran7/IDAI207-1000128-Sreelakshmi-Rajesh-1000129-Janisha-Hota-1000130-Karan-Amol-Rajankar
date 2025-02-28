@@ -24,16 +24,17 @@ To bridge this gap, this project aims to create a dedicated travel advisory app 
 •	Offer budget-friendly itinerary planning based on user preferences.
 
 ## Features
-
-- **Travel Itinerary:** Create and customize travel itineraries based on user preferences.
-- **Chatbot:** Receive AI-powered travel recommendations and answers to common travel questions.
-- **Trivia:** Engage with fun quizzes that test your knowledge of NorthEast India.
-- **Weather:** Get real-time weather updates for various travel destinations.
-- **Tourist Guide:** Discover must-visit attractions and hidden gems.
-- **Souvenirs:** Explore and shop for authentic regional souvenirs.
-- **Group Planning:** Coordinate and plan group trips with friends.
-- **Blog:** Read and share travel stories, tips, and guides.
-- **Game:** Enjoy interactive travel games to make planning fun.
+- **Travel Itinerary:** Create and customize detailed travel itineraries based on user preferences, travel history, and trip duration. Users can choose from AI-suggested plans or manually add locations, accommodations, and activities. The itinerary dynamically adjusts based on weather conditions, local events, and travel disruptions.
+- **Chatbot:** Receive AI-powered travel recommendations and instant answers to common travel-related queries. The chatbot provides real-time assistance for itinerary modifications, language translations, emergency contacts, and booking suggestions, ensuring a seamless travel experience.
+- **Trivia:** Engage with interactive quizzes that test and expand your knowledge of NorthEast India. Questions are curated based on history, folklore, geography, and cultural traditions, offering an educational and fun way to explore the region. Earn points, unlock rewards, and challenge friends to see who knows the most!
+- **Weather:** Get real-time weather updates for various travel destinations, ensuring that your trip is well-planned. The app integrates live forecasting APIs to provide temperature, precipitation, and climate alerts, helping travelers prepare for different weather conditions before and during their journey.
+- **Tourist Guide:** Discover must-visit attractions and hidden gems through curated travel guides. These guides include historical backgrounds, best visiting times, insider tips, and local recommendations. Users can also explore offbeat locations that aren't commonly found in mainstream travel lists.
+- **Souvenirs:** Explore and shop for authentic regional souvenirs directly through the app. Discover handcrafted items, cultural artifacts, and specialty products from local artisans across NorthEast India. Users can also earn digital collectibles and virtual travel badges as part of their journey.
+- **Group Planning(only Frontend):** Coordinate and plan group trips effortlessly with friends and family. The feature allows shared itinerary creation, collaborative decision-making, and real-time updates on group activities. Users can also split costs, set reminders, and vote on destinations and accommodations.
+- **Blog:** Read and share travel stories, tips, and guides from experienced travelers. Whether it’s adventure tales, budget travel hacks, or cultural deep-dives, this feature creates a community-driven platform where users can exchange insights and recommendations.
+Game: Enjoy interactive travel games designed to make planning fun and engaging. These games incorporate elements of adventure, exploration, and trivia, encouraging users to learn more about their destinations while competing for rewards.
+- **AI-Driven Personalized Recommendations:** Uses collaborative filtering and content-based recommendation algorithms to suggest destinations based on user preferences, travel history, and real-time trends. Features dynamic itinerary generation with adaptive route optimization, considering weather conditions, cultural events, and user interests.
+- **Virtual Trekking:** A simple trekking game where players "explore" virtual landscapes of the northeastern states using hand gestures or keyboard keys.
 
 ## Technologies Used
 
