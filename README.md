@@ -1,7 +1,27 @@
-# Eastern Trails - Travel Advisor App
+# Year 2 CRS AI Capstone Project 2024 – 25
+# Scenario 1 - AI-Driven Gamified Travel Advisor
+# Project Name: - Eastern Trails
+# Contributors: - Karan Amol Rajankar, Janisha Hota, Sreelakshmi Rajesh
 
-## Project Title and Description
-**Eastern Trails** is an interactive, multi-page travel advisor web application built using Streamlit. The project is designed to help users explore and plan trips across NorthEast India. With an emphasis on local culture and experiences, Eastern Trails provides personalized travel itineraries, AI-powered recommendations, real-time weather updates, engaging trivia quizzes, detailed tourist guides, a curated blog, group planning tools, and interactive travel games.
+### Introduction
+"Travel makes one modest. You see what a tiny place you occupy in the world." – Gustave Flaubert <br> 
+India's northeastern states are a treasure trove of culture, landscapes, and traditions that remain relatively unexplored. With diverse communities, breathtaking scenery, and rich heritage, the Northeast offers travelers an unparalleled experience. However, many tourists hesitate due to a lack of reliable travel information and cultural insights.
+
+### Problem Statement
+• **Low Awareness & Misconceptions** – Over 65% of Indian travelers are unaware of the diverse attractions in the Northeast, often associating the region only with hill stations like Shillong or Kaziranga, while missing out on lesser-known cultural gems (India Tourism Survey, 2023). <br>
+• **Lack of Reliable Travel Information** – More than 70% of potential visitors struggle to find well-organized itineraries, accommodation recommendations, and cultural insights tailored to the Northeast, making trip planning difficult (TripAdvisor India Report, 2023). 
+• **Limited Food & Cultural Familiarity** – Over 55% of domestic tourists are hesitant about visiting due to unfamiliarity with local cuisine and customs, fearing they may not find comfortable dining options or cultural guidance (Indian Travel Trends Report, 2023).
+• **Seasonal Travel Uncertainty** – The Northeast’s weather varies drastically, and over 60% of travelers find it hard to determine the best time to visit each state, leading to trip cancellations or missed seasonal events like Hornbill Festival or Ziro Music Festival (India Holiday Report, 2022).
+• **Transportation Challenges for Tourists** – Around 60% of travelers find it difficult to navigate within the Northeast due to limited public transport options, irregular taxi services, and lack of online booking platforms, making intra-state travel inconvenient (TravelEase India Report, 2023).
+
+### Goal
+To bridge this gap, this project aims to create a dedicated travel advisory app for India's northeastern states, offering curated travel recommendations, real-time safety updates, and culturally immersive experiences to promote tourism while ensuring traveler confidence and convenience.
+
+### Objectives
+•	Provide authentic, well-researched travel guides for all northeastern states.
+•	Integrate real-time safety, weather, and accessibility updates.
+•	Highlight the region’s cultural diversity, festivals, and heritage.
+•	Offer budget-friendly itinerary planning based on user preferences.
 
 ## Features
 - **Travel Itinerary:** Create and customize travel itineraries based on user preferences.
