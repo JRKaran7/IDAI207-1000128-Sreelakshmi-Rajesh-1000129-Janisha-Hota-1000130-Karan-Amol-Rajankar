@@ -23,6 +23,18 @@ To bridge this gap, this project aims to create a dedicated travel advisory app 
 •	Highlight the region’s cultural diversity, festivals, and heritage.
 •	Offer budget-friendly itinerary planning based on user preferences.
 
+## Journey Map
+https://www.canva.com/design/DAGW1mX-TTs/X3iOPZVZzdJyepY2yM__LA/edit?utm_content=DAGW1mX-TTs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+## User Personas
+https://www.canva.com/design/DAGVmqOXij0/1wNJU42RPvoJ3c6nf3iqtQ/edit?utm_content=DAGVmqOXij0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+## Scamper
+https://www.canva.com/design/DAGcRi7_t1w/ZkmcyiZYx3yb4tftTQhUNw/edit?utm_content=DAGcRi7_t1w&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+## Napkin Pitch
+https://www.canva.com/design/DAGbk58W9DY/T9uH6A88__T53x7Kq5tAhg/edit
+
 ## Features
 - **Travel Itinerary:** Create and customize detailed travel itineraries based on user preferences, travel history, and trip duration. Users can choose from AI-suggested plans or manually add locations, accommodations, and activities. The itinerary dynamically adjusts based on weather conditions, local events, and travel disruptions.
 - **Chatbot:** Receive AI-powered travel recommendations and instant answers to common travel-related queries. The chatbot provides real-time assistance for itinerary modifications, language translations, emergency contacts, and booking suggestions, ensuring a seamless travel experience.
