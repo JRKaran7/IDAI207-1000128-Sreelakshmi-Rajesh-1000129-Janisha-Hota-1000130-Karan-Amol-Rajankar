@@ -23,6 +23,19 @@ To bridge this gap, this project aims to create a dedicated travel advisory app 
 •	Highlight the region’s cultural diversity, festivals, and heritage.
 •	Offer budget-friendly itinerary planning based on user preferences.
 
+## Requirement Gathering
+**Functional requirements**
+- Personalised Recommendations:Recommend destinations based on user preferences
+- Live Data Integration: Real-time weather
+- Trivia: Include fun and engaging trivia related to Northeast India’s history, culture, and landmarks.
+- Integrated Chatbot: An AI-driven chatbot to provide instant answers to user queries. The chatbot can recommend destinations, assist with trip planning and suggest trip packages
+- Souvenir Badges: Users receive a souvenir badge as they complete each milestone in their trip
+
+**Technical requirements**
+- Streamlit for deployment.
+- Integrate API’s
+- Backend development using Python Programming language and its libraries
+
 ## Journey Map
 https://www.canva.com/design/DAGW1mX-TTs/X3iOPZVZzdJyepY2yM__LA/edit?utm_content=DAGW1mX-TTs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
