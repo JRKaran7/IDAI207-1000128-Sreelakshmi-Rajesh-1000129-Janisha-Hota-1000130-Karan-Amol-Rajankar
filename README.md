@@ -132,18 +132,17 @@ Static Backgrounds/Images: Use simple background images of popular trekking rout
 ## Usage Instructions
 Upon launching the app, the home page will display a header with the Eastern Trails logo and title. A subtitle briefly explains the purpose of the app. The main section displays feature cards (such as Travel Itinerary, Chatbot, Trivia, etc.) arranged in a grid. Click any card to navigate to that feature's dedicated page. Each feature page provides detailed information and interactive tools for planning your trip. Enjoy exploring travel options and planning your adventure through NorthEast India!
 
-**Contribution Guidelines**
+## Contribution Guidelines
 
 1. Contributions are welcome! To contribute:
 2. Fork the Repository.
 3. Create a New Branch for your feature or bug fix
-4. git checkout -b feature/your-feature-name
-5. Commit Your Changes with clear and descriptive commit messages.
-6. Push Your Branch to your fork
-7. Open a Pull Request on GitHub describing your changes.
-8. Please follow the existing code style and structure.
+4. Commit Your Changes with clear and descriptive commit messages.
+5. Push Your Branch to your fork
+6. Open a Pull Request on GitHub describing your changes.
+7. Please follow the existing code style and structure.
 
-**Acknowledgments**
+## Acknowledgments
 
 Streamlit: For providing an easy-to-use framework for building interactive web applications.
 OpenCV & NumPy: For their powerful image processing and numerical computation capabilities.
