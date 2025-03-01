@@ -129,6 +129,11 @@ Technology:
 Simple Interaction: Basic hand gestures or keyboard controls for movement 
 Static Backgrounds/Images: Use simple background images of popular trekking routes or landmarks to simulate the trekking experience.
 
+## Data Visualization, Storytelling, and UI/UX
+#### Tableau Link- https://public.tableau.com/app/profile/sreelakshmi.r2798/viz/TRavelAdvisor/Dashboard1
+### Prototype Link- https://easterntrails.flutterflow.app
+
+
 ### Usability Testing and Integration
 User testing and refinement involve gathering feedback from real users to improve a product’s usability, functionality, and overall experience. This process helps identify issues, enhance features, and ensure the product meets user needs. We conducted user testing by publishing a feedback form, allowing participants to share their experiences, suggestions, and pain points. The collected responses provided valuable insights into areas requiring improvement. Based on the feedback, necessary refinements were made, such as optimizing performance, fixing bugs, and enhancing user interactions. Continuous testing and iteration ensure a well-polished, user-friendly final product that aligns with expectations and requirements. <br> <br>
 
