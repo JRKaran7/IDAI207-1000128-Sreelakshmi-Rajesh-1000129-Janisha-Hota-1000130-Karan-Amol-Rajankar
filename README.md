@@ -64,6 +64,24 @@ Game: Enjoy interactive travel games designed to make planning fun and engaging.
 12. HTML
 13. CSS
 
+## Collaborative Vs. Content-Based Filtering
+This system is using content-based filtering.
+In content-based filtering, recommendations are based on the features or attributes of the items (in this case, travel packages) and the user's preferences. Here’s why:
+**User Input-Based Recommendations:** The system asks the user for their preferences (e.g., weather, budget level, popularity, etc.), and it then uses these preferences to make predictions about the most appropriate travel package.
+**Feature Matching:** The system encodes user preferences and matches them with features of travel packages stored in the dataset, such as "Weather", "Budget Level", "Popularity", etc. The package is recommended based on these feature similarities, rather than relying on other users' behavior (which would be typical in collaborative filtering).
+
+## Rewards-System
+Badges: Awarded for milestones like visiting landmarks or eco-friendly actions.
+Virtual Souvenirs: Collectibles for explored destinations, or points earned based on bookings and interactive features
+Points System: Redeem points for discounts, travel coupons, or premium app features.
+
+## Data Preprocessing
+- Our Dataset contains entries with information for each on State, Weather, Budget Level, Budget (INR), Transportation Options, Food , Hotels , Famous Places to Visit , Activities, Popularity, Reviews, Season, Language ,Safety ,Family-Friendly, Cultural Highlights
+- It has 10,000 total entries.
+- Class Imbalance: Applied SMOTE (Synthetic Minority Oversampling Technique) to handle class imbalance effectively.
+- Scaling: Standardized numerical features to normalize their range and improve model training stability.
+- Encoding: label encoded categorical variables, such as destination type and travel preferences, for machine interpretability.
+
 **Usage Instructions**
 
 Upon launching the app, the home page will display a header with the Eastern Trails logo and title. A subtitle briefly explains the purpose of the app. The main section displays feature cards (such as Travel Itinerary, Chatbot, Trivia, etc.) arranged in a grid. Click any card to navigate to that feature's dedicated page. Each feature page provides detailed information and interactive tools for planning your trip. Enjoy exploring travel options and planning your adventure through NorthEast India!
