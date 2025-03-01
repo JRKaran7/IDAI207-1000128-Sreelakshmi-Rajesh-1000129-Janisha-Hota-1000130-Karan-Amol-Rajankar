@@ -129,7 +129,13 @@ Technology:
 Simple Interaction: Basic hand gestures or keyboard controls for movement 
 Static Backgrounds/Images: Use simple background images of popular trekking routes or landmarks to simulate the trekking experience.
 
-## Usage Instructions
+### Usability Testing and Integration
+User testing and refinement involve gathering feedback from real users to improve a product’s usability, functionality, and overall experience. This process helps identify issues, enhance features, and ensure the product meets user needs. We conducted user testing by publishing a feedback form, allowing participants to share their experiences, suggestions, and pain points. The collected responses provided valuable insights into areas requiring improvement. Based on the feedback, necessary refinements were made, such as optimizing performance, fixing bugs, and enhancing user interactions. Continuous testing and iteration ensure a well-polished, user-friendly final product that aligns with expectations and requirements. <br> <br>
+
+Forms Link: - [https://docs.google.com/forms/d/e/1FAIpQLSfBc9ofc8t6M0oFv86_kheR2nj0Ue_AFm2sodNSJUMQDGmo7A/viewform?usp=header](https://docs.google.com/forms/d/e/1FAIpQLSfBc9ofc8t6M0oFv86_kheR2nj0Ue_AFm2sodNSJUMQDGmo7A/viewform?usp=header) <br>
+Responses Link: - [https://docs.google.com/spreadsheets/d/124XkOoSoNWoxmy9_HeCYjqi2yO2RolQ091qNMw9c8zA/edit?usp=sharing](https://docs.google.com/spreadsheets/d/124XkOoSoNWoxmy9_HeCYjqi2yO2RolQ091qNMw9c8zA/edit?usp=sharing)
+
+### Usage Instructions
 Upon launching the app, the home page will display a header with the Eastern Trails logo and title. A subtitle briefly explains the purpose of the app. The main section displays feature cards (such as Travel Itinerary, Chatbot, Trivia, etc.) arranged in a grid. Click any card to navigate to that feature's dedicated page. Each feature page provides detailed information and interactive tools for planning your trip. Enjoy exploring travel options and planning your adventure through NorthEast India!
 
 ## Contribution Guidelines
