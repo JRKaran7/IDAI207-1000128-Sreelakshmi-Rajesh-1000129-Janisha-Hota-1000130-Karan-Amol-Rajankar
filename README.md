@@ -50,19 +50,18 @@ Game: Enjoy interactive travel games designed to make planning fun and engaging.
 
 ## Technologies Used
 
-1. Python
-2. Streamlit
-3. SQLite
-4. Pandas
-5. NumPy
-6. Scikit-learn
-7. Pygame
-8. OpenCV (CV2)
-9. Datetime
-10.requests
-11.PIL (Pillow)
-12. HTML
-13. CSS
+1.	Python – The core backend language used to handle logic, data processing, and machine learning models, ensuring efficient computations, API integrations, and database interactions while providing an easy-to-maintain, scalable structure for future improvements in travel recommendations. <br>
+2.	Streamlit – Used to create an interactive web application interface, allowing users to input preferences, visualize recommendations, and explore travel packages in a seamless, dynamic, and user-friendly environment without needing complex frontend development knowledge. <br>
+3.	SQLite – A lightweight, file-based database system that stores user inputs, travel history, safety preferences, and recommendation logs, ensuring structured data retrieval, efficient storage, and seamless integration with the Python backend. <br>
+4.	Pandas – A powerful data manipulation library used for handling and processing travel data, analyzing user preferences, and structuring destination information, ensuring quick retrieval and transformation of data for recommendation calculations. <br>
+5.	NumPy – Used for numerical operations, data structuring, and performing array-based computations on travel-related statistics, such as budget calculations, distance metrics, and optimization functions, ensuring fast and memory-efficient processing. <br>
+6.	Scikit-learn – A machine learning library used for recommendation models, clustering destinations based on user interests, and optimizing travel package selections by analyzing past user data, ensuring relevant and data-driven suggestions. <br>
+7.	Pygame – Used for interactive features like animations, sound effects, or mini-games within the travel application, making user engagement more immersive by simulating travel scenarios or adding gamification elements, such as collecting points or unlocking destinations. <br>
+8.	OpenCV (cv2) – Used for computer vision tasks, such as detecting user engagement through facial recognition, capturing live interactions, or enabling gesture-based inputs to navigate the travel system, enhancing accessibility and making interactions more dynamic. <br>
+9.	datetime – Used for handling date-based logic, such as travel itinerary scheduling, calculating the best time to visit destinations, and filtering travel recommendations based on seasonal trends or user availability, ensuring well-timed and relevant trip planning. <br>
+10.	requests – Used for fetching real-time travel data, such as weather forecasts, flight or hotel prices, and safety updates from external APIs, ensuring users receive up-to-date and relevant information for better trip planning. <br>
+11.	PIL (Pillow) – Used for image processing tasks, such as resizing, enhancing, or overlaying travel-related images, allowing dynamic visualization of destinations, user-uploaded photos, and badge icons, ensuring a visually appealing and interactive experience. <br>
+
 
 ## Collaborative Vs. Content-Based Filtering
 This system is using content-based filtering.
