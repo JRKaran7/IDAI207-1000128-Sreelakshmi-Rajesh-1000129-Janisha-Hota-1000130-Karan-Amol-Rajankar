@@ -156,4 +156,31 @@ Gemini API: For offering an affordable alternative to OpenAI’s API for chatbot
 Community and Documentation: Thanks to the open-source community for tutorials, forums, and resources that helped shape this project.
 
 **Screenshots / Demos**
+![image](https://github.com/user-attachments/assets/61ba8cf1-8dec-42d8-8861-eb382056b4c6)
+![image](https://github.com/user-attachments/assets/1a791d0d-a5bd-408b-bb32-0cfebee1aeed)
+![image](https://github.com/user-attachments/assets/e7efdb82-c490-4b75-b70e-c6c4469c7921)
+![image](https://github.com/user-attachments/assets/0c877339-4858-4650-ade1-f8ec079a0aff)
+![image](https://github.com/user-attachments/assets/3db9bff1-7903-4878-ab76-f58153525393)
+![image](https://github.com/user-attachments/assets/163916ec-1395-4e5b-affc-c12d1e0cf2b8)
+![image](https://github.com/user-attachments/assets/3a80c3cf-e73c-40a2-a303-d7e233fcf883)
+![image](https://github.com/user-attachments/assets/dfd93aa3-8bf0-4297-940e-4ff3a38466e7)
+![image](https://github.com/user-attachments/assets/1b90ca5b-f23a-477b-b22b-ba71c93b789a)
+![image](https://github.com/user-attachments/assets/3ce085b7-7177-4231-a1f9-d44ee6144c80)
+![image](https://github.com/user-attachments/assets/f07b9574-c91e-402e-aed1-d75c50e923df)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
