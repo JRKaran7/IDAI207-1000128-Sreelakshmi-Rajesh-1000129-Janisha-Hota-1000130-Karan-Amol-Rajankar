@@ -36,6 +36,16 @@ To bridge this gap, this project aims to create a dedicated travel advisory app 
 - Integrate API’s
 - Backend development using Python Programming language and its libraries
 
+## Data Exploration
+**Datasets**
+-We explored various datasets on Kaggle and UNWTO but couldn't find one that perfectly aligns with our requirements.
+Thus we generated a dataset using multiple data generators like explo, mockaroo, generatedata.com, ChatGPT etc.
+
+**API keys**
+- OpenWeather API: For real-time weather information, forecasts, and historical weather data of various destinations.
+- Gemini API: For chatbot integration
+
+
 ## Journey Map
 https://www.canva.com/design/DAGW1mX-TTs/X3iOPZVZzdJyepY2yM__LA/edit?utm_content=DAGW1mX-TTs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
@@ -94,8 +104,32 @@ Points System: Redeem points for discounts, travel coupons, or premium app featu
 - Scaling: Standardized numerical features to normalize their range and improve model training stability.
 - Encoding: label encoded categorical variables, such as destination type and travel preferences, for machine interpretability.
 
-**Usage Instructions**
+## Feature Engineering
+- **Selected Features:** Focused on weather conditions, budget level, approximate budget, and destination popularity as key factors influencing travel preferences.
+- **Feature Importance:** Validated the significance of selected features using a Random Forest Classifier to ensure optimal model performance.
 
+## Model Building
+GridSearchCV: It is a powerful tool in machine learning that automates the process of hyperparameter tuning by performing an exhaustive search over a specified parameter grid. It evaluates model performance for each combination of hyperparameters using cross-validation, ensuring that the selected configuration generalizes well to unseen data. By splitting the dataset into training and validation sets multiple times, GridSearchCV systematically assesses how different hyperparameter values affect the model's accuracy, precision, recall, or any other defined metric. This approach not only identifies the best-performing configuration but also helps in mitigating overfitting, ensuring that the model achieves optimal performance on the test set.
+
+Outcome: Enhanced model accuracy and more reliable package recommendations.
+
+### Personalisation 
+- To enhance user experience, a dataset of 10,000 entries was created, representing the 7 northeastern states of India. This dataset incorporates multiple factors such as budget, weather, popularity, and tariff to allow for the development of a recommendation model. The model predicts the best travel package based on user preferences and delivers detailed information tailored to their needs, helping users plan their trip effectively.
+
+***Game Engine - Virtual Trekking*** 
+- Concept:
+A simple trekking game where players "explore" the virtual landscapes of the northeastern states like Sikkim or Meghalaya using basic movements like hand gestures or keyboard keys.
+
+- Gameplay Features:
+Basic Movement: Use hand gestures (e.g., moving hand forward) or keyboard arrows to control the direction of the player’s movement in the game.
+Scenic Views: Show static images or simple animations of famous locations in the northeastern states as players "move" through them.
+Trivia & Facts: As players explore, display basic facts about the region (e.g., places to visit, local culture, popular trekking routes).
+
+Technology:
+Simple Interaction: Basic hand gestures or keyboard controls for movement 
+Static Backgrounds/Images: Use simple background images of popular trekking routes or landmarks to simulate the trekking experience.
+
+## Usage Instructions
 Upon launching the app, the home page will display a header with the Eastern Trails logo and title. A subtitle briefly explains the purpose of the app. The main section displays feature cards (such as Travel Itinerary, Chatbot, Trivia, etc.) arranged in a grid. Click any card to navigate to that feature's dedicated page. Each feature page provides detailed information and interactive tools for planning your trip. Enjoy exploring travel options and planning your adventure through NorthEast India!
 
 **Contribution Guidelines**
