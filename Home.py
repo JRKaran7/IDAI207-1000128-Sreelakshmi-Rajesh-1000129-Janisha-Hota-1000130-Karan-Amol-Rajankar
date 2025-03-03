@@ -93,16 +93,16 @@ st.markdown("### Explore Our Features")
 
 # Define the card data: (Icon, Title, Description, Page filename)
 cards = [
-    ("📝", "Recommendation system", "Tailored Travel Suggestions to Plan Your Perfect Trip", "stream.py"),
-    ("📝", "Blog", "Read travel stories and tips.", "blog.py"),
-    ("🤖", "Chatbot", "Get AI-powered travel recommendations.", "chatbot.py"),
-    ("👥", "Group Planning", "Plan trips with your friends.", "group_planning.py"),
-    ("🎁", "Souvenirs", "Find and shop for authentic regional souvenirs.", "souvenirs.py"),
-    ("🗺️", "Tourist Guide", "Discover must-visit attractions and hidden gems.", "tourist.py"),
-    ("📅", "Travel Itinerary", "Plan your trip with customizable itineraries.", "travel_itinerary.py"),
-    ("🏅", "Trivia", "Test your travel knowledge with fun quizzes.", "trivia.py"),
-    ("☀️", "Weather", "Stay informed with real-time weather updates.", "weather.py"),
-    ("📰", "News", "Get the latest travel news updates.", "news.py"),
+    ("📝", "Recommendation system", "Tailored Travel Suggestions to Plan Your Perfect Trip", "Package_Recommendation.py"),
+    ("📝", "Blog", "Read travel stories and tips.", "Blog.py"),
+    ("🤖", "Chatbot", "Get AI-powered travel recommendations.", "Chatbot.py"),
+    ("👥", "Group Planning", "Plan trips with your friends.", "Group_Planning.py"),
+    ("🎁", "Souvenirs", "Find and shop for authentic regional souvenirs.", "Souvenirs.py"),
+    ("🗺️", "Tourist Guide", "Discover must-visit attractions and hidden gems.", "Tourist_Guide.py"),
+    ("📅", "Travel Itinerary", "Plan your trip with customizable itineraries.", "Travel_Itinerary.py"),
+    ("🏅", "Trivia", "Test your travel knowledge with fun quizzes.", "Trivia.py"),
+    ("☀️", "Weather", "Stay informed with real-time weather updates.", "Weather.py"),
+    ("📰", "News", "Get the latest travel news updates.", "News.py"),
 ]
 
 # Arrange cards in rows of 3 columns
