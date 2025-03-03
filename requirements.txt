@@ -1,5 +1,5 @@
 opencv-python-headless
-streamlit
+feedparser
 pillow
 pandas
 numpy
@@ -7,3 +7,6 @@ scikit-learn==1.3.2
 joblib
 mediapipe
 datetime
+opencv-python
+streamlit>=1.18
+bs4
