@@ -10,3 +10,6 @@ datetime
 opencv-python
 streamlit>=1.18
 bs4
+
+google-generativeai
+python-dotenv==1.0.0
