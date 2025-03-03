@@ -17,6 +17,19 @@ init_db()
 game = VirtualTrekGame()
 max_score = get_high_score()
 
+facts = [
+    "Northeast India has seven states, the 'Seven Sisters'.",
+    "Mawsynram, Meghalaya, records the world's highest rainfall.",
+    "Kaziranga Park, Assam, has most one-horned rhinos.",
+    "Loktak Lake, Manipur, features unique floating islands.",
+    "Mizoram’s Cheraw dance uses rhythmic bamboo movements.",
+    "Tawang Monastery, Arunachal, is India’s largest monastery.",
+    "Nohkalikai Falls, Meghalaya, is India's tallest waterfall.",
+    "Assam Tea is globally famous for its quality.",
+    "Hornbill Festival, Nagaland, showcases rich tribal traditions.",
+    "Keibul Lamjao Park, Manipur, has rare Sangai deer."
+]
+
 # Load assets safely
 try:
     print("Loading assets...")
@@ -36,6 +49,11 @@ except pygame.error as e:
     pygame.quit()
     exit()
 
+fact_index = 0  # Index for cycling through facts
+coins_collected = 0  # Counter to track every two coins collected
+show_fact = False  # Flag to control fact display
+fact_display_timer = 0  # Timer for displaying fact
+
 # Scale assets properly
 backgrounds = [pygame.transform.scale(bg, (WIDTH, HEIGHT)) for bg in backgrounds]
 players = [pygame.transform.scale(pl, (120, 120)) for pl in players]
@@ -43,7 +61,7 @@ coin_img = pygame.transform.scale(coin_img, (30, 30))
 ground_img = pygame.transform.scale(ground_img, (WIDTH, 50))
 
 # Camera Setup
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 if not cap.isOpened():
     print("Error: Camera not detected.")
     pygame.quit()
@@ -82,7 +100,7 @@ scroll_speed = 3  # Speed of scrolling
 # Player & Coin Positions
 player_x = 100
 player_y = HEIGHT - 50 - players[selected_player].get_height()
-coin_x = random.randint(WIDTH - 50, WIDTH + 50)
+coin_x = random.randint(WIDTH - 20, WIDTH + 20)
 coin_y = HEIGHT - 50 - 35
 
 score = 0
@@ -128,26 +146,38 @@ while running:
 
     # Detect leg movement
     if detect_leg_movement(frame):
-        coin_x -= 20  # Move coin left
+        coin_x -= 40  # Move coin left
         bg_x1 -= scroll_speed
         bg_x2 -= scroll_speed
 
-    # Reset background when it moves out of frame
+    # Move backgrounds left
+    bg_x1 -= scroll_speed
+    bg_x2 -= scroll_speed
+
+    # Reset background positions for seamless looping
     if bg_x1 <= -WIDTH:
-        bg_x1 = WIDTH
+        bg_x1 = bg_x2 + WIDTH
     if bg_x2 <= -WIDTH:
-        bg_x2 = WIDTH
+        bg_x2 = bg_x1 + WIDTH
 
     # Check for coin collection
     if abs(coin_x - player_x) < 40:
-        score += 10
+        score += 40
+        coins_collected += 1  # Increase coin counter
+
+        if coins_collected % 2 == 0:  # Show fact after every 2 coins
+            fact_index = (fact_index + 1) % len(facts)  # Cycle through facts
+            show_fact = True
+            fact_display_timer = pygame.time.get_ticks()  # Set timer
+
         if score > max_score:
             max_score = score
-        coin_x = random.randint(WIDTH - 20, WIDTH + 20)  # Respawn coin closer
+
+        coin_x = random.randint(WIDTH - 10, WIDTH + 10)  # Respawn coin closer
 
     # If coin moves out of frame, spawn a new one
     if coin_x < -30:
-        coin_x = random.randint(WIDTH - 20, WIDTH + 20)
+        coin_x = random.randint(WIDTH - 10, WIDTH + 10)
 
     # Draw everything
     screen.blit(background, (bg_x1, 0))
@@ -162,6 +192,15 @@ while running:
     max_score_text = font.render(f"Max Score: {max_score}", True, (255, 255, 255))
     screen.blit(score_text, (10, 10))
     screen.blit(max_score_text, (10, 40))
+
+    # Display fact for 3 seconds
+    if show_fact:
+        fact_text = font.render(facts[fact_index], True, (255, 255, 0))
+        screen.blit(fact_text, (WIDTH // 2 - fact_text.get_width() // 2, HEIGHT // 2))
+
+        # Hide fact after 3 seconds
+        if pygame.time.get_ticks() - fact_display_timer > 3000:
+            show_fact = False
 
     pygame.display.flip()
     clock.tick(30)
