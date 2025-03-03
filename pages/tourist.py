@@ -28,7 +28,7 @@ st.markdown("""
         .guide-card {
             padding: 15px;
             border-radius: 10px;
-            background-color: black;
+            background-color: white;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
         }
         .guide-link {
