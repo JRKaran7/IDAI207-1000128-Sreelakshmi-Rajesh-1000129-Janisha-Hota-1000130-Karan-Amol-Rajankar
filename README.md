@@ -169,7 +169,6 @@ Community and Documentation: Thanks to the open-source community for tutorials, 
 ![image](https://github.com/user-attachments/assets/4bcaf66a-fc3a-42a6-919b-32bfcaa574ba)
 ![image](https://github.com/user-attachments/assets/3a80c3cf-e73c-40a2-a303-d7e233fcf883)
 ![image](https://github.com/user-attachments/assets/dfd93aa3-8bf0-4297-940e-4ff3a38466e7)
-![image](https://github.com/user-attachments/assets/1b90ca5b-f23a-477b-b22b-ba71c93b789a)
 ![image](https://github.com/user-attachments/assets/3ce085b7-7177-4231-a1f9-d44ee6144c80)
 ![image](https://github.com/user-attachments/assets/f07b9574-c91e-402e-aed1-d75c50e923df)
 ![image](https://github.com/user-attachments/assets/b05da8ce-205f-4d4e-9017-9133553fbb18)
