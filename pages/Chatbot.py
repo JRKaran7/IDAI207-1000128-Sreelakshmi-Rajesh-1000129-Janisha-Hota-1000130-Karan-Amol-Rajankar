@@ -1,10 +1,7 @@
 import pandas as pd
 import streamlit as st
 
-
-
 # Dictionary containing general travel information
-
 seven_sisters_info = {
     "Arunachal Pradesh": {
         "History": "Arunachal Pradesh, known as the 'Land of the Rising Sun,' has a rich history influenced by the Monpa Kingdoms, Tibetan culture, and British colonial rule. It became a full-fledged state of India in 1987. The region has historical ties with Tibet and has seen conflicts like the 1962 Indo-China War. The state's history is deeply connected with indigenous tribes and their traditions, including the rule of the Chutia and Ahom dynasties in certain regions.",
