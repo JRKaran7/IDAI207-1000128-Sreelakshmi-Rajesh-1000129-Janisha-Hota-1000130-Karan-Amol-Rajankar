@@ -9,32 +9,32 @@ India's northeastern states are a treasure trove of culture, landscapes, and tra
 
 ### Problem Statement
 • **Low Awareness & Misconceptions** – Over 65% of Indian travelers are unaware of the diverse attractions in the Northeast, often associating the region only with hill stations like Shillong or Kaziranga, while missing out on lesser-known cultural gems (India Tourism Survey, 2023). <br>
-• **Lack of Reliable Travel Information** – More than 70% of potential visitors struggle to find well-organized itineraries, accommodation recommendations, and cultural insights tailored to the Northeast, making trip planning difficult (TripAdvisor India Report, 2023). 
-• **Limited Food & Cultural Familiarity** – Over 55% of domestic tourists are hesitant about visiting due to unfamiliarity with local cuisine and customs, fearing they may not find comfortable dining options or cultural guidance (Indian Travel Trends Report, 2023).
-• **Seasonal Travel Uncertainty** – The Northeast’s weather varies drastically, and over 60% of travelers find it hard to determine the best time to visit each state, leading to trip cancellations or missed seasonal events like Hornbill Festival or Ziro Music Festival (India Holiday Report, 2022).
-• **Transportation Challenges for Tourists** – Around 60% of travelers find it difficult to navigate within the Northeast due to limited public transport options, irregular taxi services, and lack of online booking platforms, making intra-state travel inconvenient (TravelEase India Report, 2023).
+• **Lack of Reliable Travel Information** – More than 70% of potential visitors struggle to find well-organized itineraries, accommodation recommendations, and cultural insights tailored to the Northeast, making trip planning difficult (TripAdvisor India Report, 2023). <br>
+• **Limited Food & Cultural Familiarity** – Over 55% of domestic tourists are hesitant about visiting due to unfamiliarity with local cuisine and customs, fearing they may not find comfortable dining options or cultural guidance (Indian Travel Trends Report, 2023). <br>
+• **Seasonal Travel Uncertainty** – The Northeast’s weather varies drastically, and over 60% of travelers find it hard to determine the best time to visit each state, leading to trip cancellations or missed seasonal events like Hornbill Festival or Ziro Music Festival (India Holiday Report, 2022). <br>
+• **Transportation Challenges for Tourists** – Around 60% of travelers find it difficult to navigate within the Northeast due to limited public transport options, irregular taxi services, and lack of online booking platforms, making intra-state travel inconvenient (TravelEase India Report, 2023). <br>
 
 ### Goal
 To bridge this gap, this project aims to create a dedicated travel advisory app for India's northeastern states, offering curated travel recommendations, real-time safety updates, and culturally immersive experiences to promote tourism while ensuring traveler confidence and convenience.
 
 ### Objectives
-•	Provide authentic, well-researched travel guides for all northeastern states.
-•	Integrate real-time safety, weather, and accessibility updates.
-•	Highlight the region’s cultural diversity, festivals, and heritage.
-•	Offer budget-friendly itinerary planning based on user preferences.
+•	Provide authentic, well-researched travel guides for all northeastern states. <br>
+•	Integrate real-time safety, weather, and accessibility updates. <br>
+•	Highlight the region’s cultural diversity, festivals, and heritage. <br>
+•	Offer budget-friendly itinerary planning based on user preferences. <br>
 
 ## Requirement Gathering
-**Functional requirements**
-- Personalised Recommendations:Recommend destinations based on user preferences
-- Live Data Integration: Real-time weather
-- Trivia: Include fun and engaging trivia related to Northeast India’s history, culture, and landmarks.
-- Integrated Chatbot: An AI-driven chatbot to provide instant answers to user queries. The chatbot can recommend destinations, assist with trip planning and suggest trip packages
-- Souvenir Badges: Users receive a souvenir badge as they complete each milestone in their trip
+**Functional requirements** <br>
+- Personalised Recommendations:Recommend destinations based on user preferences <br>
+- Live Data Integration: Real-time weather <br>
+- Trivia: Include fun and engaging trivia related to Northeast India’s history, culture, and landmarks. <br>
+- Integrated Chatbot: An AI-driven chatbot to provide instant answers to user queries. The chatbot can recommend destinations, assist with trip planning and suggest trip packages. <br>
+- Souvenir Badges: Users receive a souvenir badge as they complete each milestone in their trip.
 
 **Technical requirements**
-- Streamlit for deployment.
-- Integrate API’s
-- Backend development using Python Programming language and its libraries
+- Streamlit for deployment. <br>
+- Integrate API’s <br>
+- Backend development using Python Programming language and its libraries <br>
 
 ## Data Exploration
 **Datasets**
@@ -93,7 +93,7 @@ In content-based filtering, recommendations are based on the features or attribu
 **Feature Matching:** The system encodes user preferences and matches them with features of travel packages stored in the dataset, such as "Weather", "Budget Level", "Popularity", etc. The package is recommended based on these feature similarities, rather than relying on other users' behavior (which would be typical in collaborative filtering).
 
 ## Rewards-System
-Badges: Awarded for milestones like visiting landmarks or eco-friendly actions.
+Badges: Awarded for milestones like visiting landmarks or eco-friendly actions. <br>
 Virtual Souvenirs: Collectibles for explored destinations, or points earned based on bookings and interactive features
 Points System: Redeem points for discounts, travel coupons, or premium app features.
 
@@ -118,12 +118,12 @@ Outcome: Enhanced model accuracy and more reliable package recommendations.
 
 ***Game Engine - Virtual Trekking*** 
 - Concept:
-A simple trekking game where players "explore" the virtual landscapes of the northeastern states like Sikkim or Meghalaya using basic movements like hand gestures or keyboard keys.
+A simple trekking game where players "explore" the virtual landscapes of the northeastern states like Sikkim or Meghalaya through computer vision by walking in front of the camera
 
 - Gameplay Features:
-Basic Movement: Use hand gestures (e.g., moving hand forward) or keyboard arrows to control the direction of the player’s movement in the game.
-Scenic Views: Show static images or simple animations of famous locations in the northeastern states as players "move" through them.
-Trivia & Facts: As players explore, display basic facts about the region (e.g., places to visit, local culture, popular trekking routes).
+Basic Movement: Use hand gestures (e.g., moving hand forward) or walking movements to control the direction of the player’s movement in the game. <br>
+Scenic Views: Show static images or simple animations of famous locations in the northeastern states as players "move" through them. <br>
+Trivia & Facts: As players explore, display basic facts about the region (e.g., places to visit, local culture, popular trekking routes). <br> <br>
 
 Technology:
 Simple Interaction: Basic hand gestures or keyboard controls for movement 
